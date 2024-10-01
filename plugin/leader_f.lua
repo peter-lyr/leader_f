@@ -12,4 +12,6 @@ require 'which-key'.register {
 
   ['<leader>fj'] = { '<cmd>AerialNext<cr>', 'lsp: AerialNext', mode = { 'n', 'v', }, },
   ['<leader>fk'] = { '<cmd>AerialPrev<cr>', 'lsp: AerialPrev', mode = { 'n', 'v', }, },
+
+  ['<leader>fn'] = { ':<c-u>IncRename <c-r><c-w>', 'lsp: IncRename', mode = { 'n', 'v', }, },
 }
