@@ -5,4 +5,6 @@ require 'which-key'.register {
   ['<leader>fw'] = { function() vim.cmd 'ClangdSwitchSourceHeader' end, 'lsp: ClangdSwitchSourceHeader', mode = { 'n', 'v', }, },
   ['<leader>ff'] = { function() vim.lsp.buf.format() end, 'lsp: format', mode = { 'n', 'v', }, },
   ['<leader>fp'] = { function() F.format_paragraph() end, 'lsp: format paragraph', mode = { 'n', 'v', }, },
+  ['<leader>fl'] = { function() F.lsp_document_symbols() end, 'lsp: lsp_document_symbols', mode = { 'n', 'v', }, },
+  ['<leader>fr'] = { function() F.lsp_references() end, 'lsp: lsp_references', mode = { 'n', 'v', }, },
 }
