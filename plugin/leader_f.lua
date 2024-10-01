@@ -15,6 +15,20 @@ require 'which-key'.register {
   ['<leader>fj'] = { '<cmd>AerialNext<cr>', 'lsp: AerialNext', mode = { 'n', 'v', }, },
   ['<leader>fk'] = { '<cmd>AerialPrev<cr>', 'lsp: AerialPrev', mode = { 'n', 'v', }, },
 
+  ['<leader>fd'] = { name = 'lsp.definision/declaration/diagnostic', },
+  ['<leader>fdj'] = { function() vim.diagnostic.goto_next() end, 'lsp: diagnostic.goto_next', mode = { 'n', 'v', }, },
+  ['<leader>fdk'] = { function() vim.diagnostic.goto_prev() end, 'lsp: diagnostic.goto_prev', mode = { 'n', 'v', }, },
+  ['<leader>fdf'] = { function() vim.diagnostic.open_float() end, 'lsp: diagnostic.open_float', mode = { 'n', 'v', }, },
+  ['<leader>fdl'] = { function() vim.diagnostic.setloclist() end, 'lsp: diagnostic.setloclist', mode = { 'n', 'v', }, },
+  ['<leader>fde'] = { function() vim.diagnostic.enable() end, 'lsp: diagnostic.enable', mode = { 'n', 'v', }, },
+  ['<leader>fdd'] = { function() vim.diagnostic.enable(false) end, 'lsp: diagnostic.disable', mode = { 'n', 'v', }, },
+  ['<leader>fdi'] = { function() vim.lsp.buf.definition() end, 'lsp: definition', mode = { 'n', 'v', }, },
+  ['<leader>fdc'] = { function() vim.lsp.buf.declaration() end, 'lsp: declaration', mode = { 'n', 'v', }, },
+
+  ['<leader>fh'] = { function() vim.lsp.buf.hover() end, 'lsp: hover', mode = { 'n', 'v', }, },
+
+  ['<leader>fc'] = { function() vim.lsp.buf.code_action() end, 'lsp: code_action', mode = { 'n', 'v', }, },
+
   ['<leader>fn'] = { ':<c-u>IncRename <c-r><c-w>', 'lsp: IncRename', mode = { 'n', 'v', }, },
   ['<leader>f<leader>s'] = { function() vim.cmd 'LspStart' end, 'lsp: LspStart', mode = { 'n', 'v', }, },
   ['<leader>f<leader>w'] = { function() vim.cmd 'LspStop' end, 'lsp: LspStop', mode = { 'n', 'v', }, },
