@@ -2,6 +2,7 @@ local F = require 'f'
 
 require 'which-key'.register {
   ['<leader>f'] = { name = 'lsp', },
+  ['<leader>f<leader>'] = { name = 'lsp.more', },
   ['<leader>fw'] = { function() vim.cmd 'ClangdSwitchSourceHeader' end, 'lsp: ClangdSwitchSourceHeader', mode = { 'n', 'v', }, },
   ['<leader>ff'] = { function() vim.lsp.buf.format() end, 'lsp: format', mode = { 'n', 'v', }, },
   ['<leader>fp'] = { function() F.format_paragraph() end, 'lsp: format paragraph', mode = { 'n', 'v', }, },
@@ -15,4 +16,6 @@ require 'which-key'.register {
   ['<leader>fk'] = { '<cmd>AerialPrev<cr>', 'lsp: AerialPrev', mode = { 'n', 'v', }, },
 
   ['<leader>fn'] = { ':<c-u>IncRename <c-r><c-w>', 'lsp: IncRename', mode = { 'n', 'v', }, },
+  ['<leader>f<leader>s'] = { function() vim.cmd 'LspStart' end, 'lsp: LspStart', mode = { 'n', 'v', }, },
+  ['<leader>f<leader>w'] = { function() vim.cmd 'LspStop' end, 'lsp: LspStop', mode = { 'n', 'v', }, },
 }
